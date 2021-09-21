@@ -1,12 +1,14 @@
 package com.amazon.qa.scenario_steps;
 
 
+import com.amazon.qa.items.Item;
 import com.amazon.qa.steps.HomeSteps;
 import com.amazon.qa.steps.SearchSteps;
 import com.amazon.qa.Session;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Steps;
+import org.junit.Assert;
 
 public class HomeScenarioSteps {
 
@@ -29,8 +31,10 @@ public class HomeScenarioSteps {
 
     @Then("I select my favorite item to purchase")
     public void i_select_my_favorite_item_to_purchase() {
-        Session.getItem();
-        searchSteps.clickOnTheFirstImageOnResultsStep();
+        String item = Session.getItem();
+
+        Assert.assertNotNull(item);
+        searchSteps.clickOnTheFirstImageOnResultsStep(item);
 
     }
 

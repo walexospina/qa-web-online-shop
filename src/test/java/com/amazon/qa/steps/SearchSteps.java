@@ -21,10 +21,11 @@ public class SearchSteps extends ScenarioSteps {
     }
 
     @Step
-    public SearchSteps clickOnTheFirstImageOnResultsStep() {
+    public SearchSteps clickOnTheFirstImageOnResultsStep(String item) {
         itemPage = resultPage.clickOnFirsImageOnResultList();
-        waitABit(300);
         itemPage.isPresent();
+
+        itemPage.shouldContainMySearchedItemText(item);
 
         return this;
     }

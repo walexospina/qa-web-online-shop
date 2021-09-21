@@ -35,4 +35,14 @@ public class ItemPage extends BasePage{
         return this;
     }
 
+    public ItemPage shouldContainMySearchedItemText(String item) {
+        productTitle.containsText(item);
+        productImage.containsText(item);
+        amazonChoiceItemSearchedText.containsText(item);
+
+        return this;
+    }
+
+
+
 }
