@@ -5,6 +5,7 @@ import com.amazon.qa.steps.HomeSteps;
 import com.amazon.qa.steps.SearchSteps;
 import com.amazon.qa.Session;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Steps;
 
 public class HomeScenarioSteps {
@@ -24,6 +25,13 @@ public class HomeScenarioSteps {
     public void i_am_interesting_in_an_item(String item) {
         Session.storeItem(item);
         searchSteps.searchItemSteps(item);
+    }
+
+    @Then("I select my favorite item to purchase")
+    public void i_select_my_favorite_item_to_purchase() {
+        Session.getItem();
+        searchSteps.clickOnTheFirstImageOnResultsStep();
+
     }
 
 }

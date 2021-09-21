@@ -12,6 +12,6 @@ Feature: add items to the shopping cart
   Scenario: add an item to the shopping cart
     Given I am in amazon web site
     And I am interesting in a "canon eos 90d"
-    #Then I select my  favorite item to purchase
+    Then I select my favorite item to purchase
    # When I go to my shopping  cart
    # Then I should be ready to  process with the checkout

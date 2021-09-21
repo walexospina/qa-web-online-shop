@@ -3,7 +3,7 @@ package com.amazon.qa.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
-public class MainMenuOptions extends BasePage {
+public class MainContainer extends BasePage {
 
     @FindBy(id = "navbar")
     WebElementFacade navigationBar;
@@ -21,29 +21,24 @@ public class MainMenuOptions extends BasePage {
     WebElementFacade departmentsFilter;
 
     @FindBy(id = "nav-main")
-    WebElementFacade mainMenuOptions;
+    WebElementFacade mainNavegationOptions;
 
-    public MainMenuOptions isPresent() {
+    public MainContainer isPresent() {
         navigationBar.waitUntilVisible();
         searchField.waitUntilVisible();
         searchButton.isClickable();
         departmentsFilter.isPresent();
         searchInputField.isPresent();
-        mainMenuOptions.isVisible();
+        mainNavegationOptions.isVisible();
         return this;
     }
 
-    public MainMenuOptions searchItem(String item) {
+    public MainContainer searchItem(String item) {
 
         searchInputField.waitUntilEnabled().sendKeys(item);
         searchButton.click();
 
-
         return this;
     }
 
-    public MainMenuOptions mainMenuOptionsPresent() {
-        mainMenuOptions.waitUntilVisible();
-        return this;
-    }
 }
