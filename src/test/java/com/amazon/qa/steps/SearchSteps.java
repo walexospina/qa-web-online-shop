@@ -12,6 +12,7 @@ public class SearchSteps extends ScenarioSteps {
     public SearchSteps searchItemSteps(String item) {
         mainMenuOptions.searchItem(item);
 
+
         return this;
     }
 }
