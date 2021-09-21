@@ -1,7 +1,7 @@
-package com.qa.steps;
+package com.amazon.qa.steps;
 
-import com.qa.pages.BasePage;
-import com.qa.pages.HomePage;
+import com.amazon.qa.pages.BasePage;
+import com.amazon.qa.pages.HomePage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 

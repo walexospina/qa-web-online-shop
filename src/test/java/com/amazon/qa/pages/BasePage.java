@@ -1,4 +1,4 @@
-package com.qa.pages;
+package com.amazon.qa.pages;
 
 import net.serenitybdd.core.pages.PageUrls;
 import net.thucydides.core.pages.PageObject;

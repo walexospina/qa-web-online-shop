@@ -1,4 +1,4 @@
-package com.qa.pages;
+package com.amazon.qa.pages;
 
 
 import net.serenitybdd.core.annotations.findby.FindBy;
@@ -6,7 +6,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 import java.util.List;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
         public static final String AMAZON_SPAIN_URL = "https://www.amazon.es";
 

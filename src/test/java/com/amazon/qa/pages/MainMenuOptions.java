@@ -1,4 +1,4 @@
-package com.qa.pages;
+package com.amazon.qa.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -35,8 +35,9 @@ public class MainMenuOptions extends BasePage {
 
     public MainMenuOptions searchItem(String item) {
 
-
-        searchInputField.waitUntilEnabled().type(item);
+        searchInputField.waitUntilEnabled().sendKeys(item);
+        searchButton.click();
+        waitABit(9000);
 
         return this;
     }

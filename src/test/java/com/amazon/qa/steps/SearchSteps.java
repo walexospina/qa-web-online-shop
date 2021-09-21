@@ -1,7 +1,7 @@
-package com.qa.steps;
+package com.amazon.qa.steps;
 
-import com.qa.pages.HomePage;
-import com.qa.pages.MainMenuOptions;
+import com.amazon.qa.pages.HomePage;
+import com.amazon.qa.pages.MainMenuOptions;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
@@ -11,7 +11,6 @@ public class SearchSteps extends ScenarioSteps {
     @Step
     public SearchSteps searchItemSteps(String item) {
         mainMenuOptions.searchItem(item);
-
 
         return this;
     }

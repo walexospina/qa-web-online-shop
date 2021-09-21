@@ -1,9 +1,9 @@
-package com.qa.scenario_steps;
+package com.amazon.qa.scenario_steps;
 
-import com.qa.items.Item;
-import com.qa.steps.HomeSteps;
-import com.qa.steps.SearchSteps;
-import com.qa.utils.Session;
+
+import com.amazon.qa.steps.HomeSteps;
+import com.amazon.qa.steps.SearchSteps;
+import com.amazon.qa.Session;
 import io.cucumber.java.en.Given;
 import net.thucydides.core.annotations.Steps;
 

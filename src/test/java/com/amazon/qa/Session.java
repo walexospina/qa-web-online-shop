@@ -1,4 +1,4 @@
-package com.qa.utils;
+package com.amazon.qa;
 
 import com.qa.items.Item;
 import net.serenitybdd.core.Serenity;
