@@ -1,4 +1,4 @@
-package com.qa.utils;
+package com.amazon.qa;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
