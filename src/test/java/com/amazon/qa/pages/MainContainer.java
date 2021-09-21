@@ -23,6 +23,9 @@ public class MainContainer extends BasePage {
     @FindBy(id = "nav-main")
     WebElementFacade mainNavegationOptions;
 
+    @FindBy(id = "nav-cart-count-container")
+    WebElementFacade myCartButton;
+
     public MainContainer isPresent() {
         navigationBar.waitUntilVisible();
         searchField.waitUntilVisible();
@@ -30,6 +33,7 @@ public class MainContainer extends BasePage {
         departmentsFilter.isPresent();
         searchInputField.isPresent();
         mainNavegationOptions.isVisible();
+        myCartButton.isVisible();
         return this;
     }
 

@@ -30,6 +30,7 @@ public class ItemPage extends BasePage{
         productImage.waitUntilVisible();
         customerReviews.isVisible();
         addToCartButton.isClickable();
+        buyNowButton.isClickable();
 
         mainContainer.isPresent();
         return this;
@@ -43,6 +44,10 @@ public class ItemPage extends BasePage{
         return this;
     }
 
+    public ItemPage clickAddCartButton() {
+        addToCartButton.waitUntilClickable().click();
 
+        return this;
+    }
 
 }

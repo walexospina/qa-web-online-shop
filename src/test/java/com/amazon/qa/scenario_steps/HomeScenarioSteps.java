@@ -1,7 +1,6 @@
 package com.amazon.qa.scenario_steps;
 
-
-import com.amazon.qa.items.Item;
+import com.amazon.qa.steps.ConversionSteps;
 import com.amazon.qa.steps.HomeSteps;
 import com.amazon.qa.steps.SearchSteps;
 import com.amazon.qa.Session;
@@ -17,6 +16,9 @@ public class HomeScenarioSteps {
 
     @Steps
     SearchSteps searchSteps;
+
+    @Steps
+    ConversionSteps conversionSteps;
 
     @Given("I am in amazon web site")
     public void i_am_in_amazon_web_site() {
@@ -35,6 +37,9 @@ public class HomeScenarioSteps {
 
         Assert.assertNotNull(item);
         searchSteps.clickOnTheFirstImageOnResultsStep(item);
+
+        conversionSteps.clickOnAddCartStep();
+
 
     }
 
