@@ -37,7 +37,7 @@ public class MainMenuOptions extends BasePage {
 
         searchInputField.waitUntilEnabled().sendKeys(item);
         searchButton.click();
-        waitABit(9000);
+
 
         return this;
     }

@@ -1,4 +1,4 @@
-package com.qa.items;
+package com.amazon.qa.items;
 
 public class Item {
 

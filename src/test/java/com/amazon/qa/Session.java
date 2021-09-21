@@ -1,6 +1,5 @@
 package com.amazon.qa;
 
-import com.qa.items.Item;
 import net.serenitybdd.core.Serenity;
 import org.junit.Assert;
 
