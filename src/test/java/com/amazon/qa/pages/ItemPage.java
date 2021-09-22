@@ -27,9 +27,6 @@ public class ItemPage extends BasePage{
     WebElementFacade goToCartPageButton;
 
 
-    @FindBy(id = "attach-warranty-pane")
-    WebElementFacade warrantyPopup;
-
     @FindBy(xpath = "//*[@id='attachSiNoCoverage']//*[contains(@class, 'a-button-input')]")
     WebElementFacade warrantyPopUpNoThankYouButton;
 
