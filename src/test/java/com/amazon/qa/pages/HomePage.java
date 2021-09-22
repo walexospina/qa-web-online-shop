@@ -25,7 +25,7 @@ public class HomePage extends BasePage {
         @FindBy(className = "gw-card-layout")
         List<WebElementFacade> amazonProductsCards;
 
-        MainMenuOptions mainMenuOptions;
+        MainContainer mainContainer;
 
         public HomePage isPresent() {
                 amazonProductsCarousel.waitUntilVisible();
@@ -33,7 +33,7 @@ public class HomePage extends BasePage {
                 footer.isVisible();
                 accountLink.isPresent();
 
-                mainMenuOptions.isPresent();
+                mainContainer.isPresent();
                 return this;
         }
 
