@@ -11,7 +11,7 @@ Feature: add items to the shopping cart
   @regression
   Scenario: add an item to the shopping cart
     Given I am in amazon web site
-    And I am interesting in to buy this "canon eos 90d" item
+    And I am interesting in to buy this "canon eos" item
     When I select my favorite item to purchase
     And I go to my shopping cart
     Then I should be ready to process with the checkout
