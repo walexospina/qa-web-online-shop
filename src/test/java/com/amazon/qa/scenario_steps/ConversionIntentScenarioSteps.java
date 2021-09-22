@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Assert;
 
-public class HomeScenarioSteps {
+public class ConversionIntentScenarioSteps {
 
     @Steps
     HomeSteps homeSteps;
