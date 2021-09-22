@@ -23,6 +23,16 @@ public class ItemPage extends BasePage{
     @FindBy(id = "buy-now-button")
     WebElementFacade buyNowButton;
 
+    @FindBy(id = "attach-sidesheet-view-cart-button-announce")
+    WebElementFacade goToCartPageButton;
+
+
+    @FindBy(id = "attach-warranty-pane")
+    WebElementFacade warrantyPopup;
+
+    @FindBy(xpath = "//*[@id='attachSiNoCoverage']//*[contains(@class, 'a-button-input')]")
+    WebElementFacade warrantyPopUpNoThankYouButton;
+
     MainContainer mainContainer;
 
     public ItemPage isPresent() {
@@ -46,8 +56,16 @@ public class ItemPage extends BasePage{
 
     public ItemPage clickAddCartButton() {
         addToCartButton.waitUntilClickable().click();
-
+        waitABit(3000);
         return this;
     }
+
+    public ItemPage warrantyNoThankYou() {
+        warrantyPopUpNoThankYouButton.waitUntilPresent().click();
+        goToCartPageButton.waitUntilVisible();
+        return this;
+    }
+
+
 
 }

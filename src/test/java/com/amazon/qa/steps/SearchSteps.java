@@ -21,7 +21,7 @@ public class SearchSteps extends ScenarioSteps {
     }
 
     @Step
-    public SearchSteps clickOnTheFirstImageOnResultsStep(String item) {
+    public SearchSteps selectFirstImageOnResultsStep(String item) {
         itemPage = resultPage.clickOnFirsImageOnResultList();
         itemPage.isPresent();
 

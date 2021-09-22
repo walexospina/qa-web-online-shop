@@ -16,7 +16,7 @@ public class ResultPage extends BasePage {
     @FindBy(xpath = "//*[@data-cel-widget='search_result_0']//*[contains(@class, 'image')]")
     WebElementFacade firstElementClickableOnResultList;
 
-    @FindBy(css = "[data-component-type='s-search-result'] ")
+    @FindBy(css = "[data-component-type='s-search-result']")
     List<WebElementFacade> listOfItemsResult;
 
     @FindBy(xpath = "//*[@data-component-type='s-search-result']//*[contains(@class, 'image')]")
