@@ -1,0 +1,1 @@
+docker-compose -f selenium-hub.yaml up --force-recreate -d

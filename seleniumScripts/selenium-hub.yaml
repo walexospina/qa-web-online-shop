@@ -1,0 +1,35 @@
+version: '2'
+services:
+  firefox:
+    image: selenium/node-firefox:latest
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+      TZ: Europe/Amsterdam
+      SCREEN_WIDTH: 1080
+      SCREEN_HEIGHT: 1080
+
+  chrome:
+    image: selenium/node-chrome:3.141.59
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+      TZ: Europe/Amsterdam
+      SCREEN_WIDTH: 1920
+      SCREEN_HEIGHT: 1080
+      NODE_MAX_INSTANCES: 8
+      NODE_MAX_SESSION: 8
+
+  hub:
+    image: selenium/hub:3.141.59
+    environment:
+      TZ: Europe/Amsterdam
+      GRID_TIMEOUT: 90
+    ports:
+      - "8888:4444"
