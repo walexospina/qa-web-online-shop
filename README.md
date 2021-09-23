@@ -16,11 +16,10 @@
 |**Folder** | **Content**  |
 |---       | ---         |
 | [src/test/resources/features](src/test/resources/features)  |  Cucumber feature files grouped in business areas      |
-| [src/test/resources/actors](src/test/resources/actors)|  Json file representation of test users, used on scenarios as actors. Named actors represent real test users in database     |
 | [src/test/java/com/amazon/qa/pages](src/test/java/com/amazon/qa/pages) |  Page Objects      |
 | [src/test/java/com/amazon/qa/steps](src/test/java/com/amazon/qa/steps) |  Serenity step libraries     |
 | [src/test/java/com/amazon/qa/scenario_steps](src/test/java/com/amazon/qa/scenario_steps) |  Scenario step definitions for the Cucumber scenarios inside test stories     |
-| [seleniumhub-scripts](seleniumhub-scripts) |  Scripts to run the docker selenium hub on a remote machine     |
+| [seleniumScripts](seleniumScripts) |  Scripts to run the docker selenium hub on a remote machine     |
 
 ## Overview
 
@@ -49,8 +48,12 @@ note: in case that script does not work execute execiute "docker-compose -f sele
 ```
 ### To run tests on your machine:
 ```
-mvn clean verify -Dcontext=chrome  -Dwebdriver.remote.url=http://localhost:8888/wd/hub"
-mvn clean verify -Dcontext=firefox  -Dwebdriver.remote.url=http://localhost:8888/wd/hub"
+In  local: 
+ mvn clean verify -Dcontext=chrome -Dwebdriver.driver=chrome
+
+Remote:
+ mvn clean verify -Dcontext=chrome  -Dwebdriver.remote.url=http://localhost:8888/wd/hub"
+ mvn clean verify -Dcontext=firefox  -Dwebdriver.remote.url=http://localhost:8888/wd/hub"
 
 ```
 Here we are not calling the maven target "clean" on the second test run. We do that to prevent maven from deleting the Serenity reports generated on the first test run.
