@@ -53,7 +53,7 @@ public class ItemPage extends BasePage{
 
     public ItemPage clickAddCartButton() {
         addToCartButton.waitUntilClickable().click();
-        waitABit(3000);
+        warrantyPopUpNoThankYouButton.waitUntilVisible();
         return this;
     }
 
