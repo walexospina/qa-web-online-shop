@@ -4,6 +4,8 @@ import net.serenitybdd.core.pages.PageUrls;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -33,6 +35,12 @@ public class BasePage extends PageObject {
             }
         }
         return true;
+    }
+
+    protected void fluentWaitForElementToBeVisible(org.openqa.selenium.By locator, int timeoutInSecons){
+
+        WebDriverWait wait = new WebDriverWait(getDriver(), timeoutInSecons);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
 }

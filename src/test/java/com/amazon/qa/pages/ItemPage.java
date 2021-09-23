@@ -2,8 +2,11 @@ package com.amazon.qa.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
+import org.openqa.selenium.By;
 
 public class ItemPage extends BasePage{
+
+    private static final String warrantyPopUp = "attachSiAddCoverage";
 
     @FindBy(id = "productTitle")
     WebElementFacade productTitle;
@@ -53,7 +56,8 @@ public class ItemPage extends BasePage{
 
     public ItemPage clickAddCartButton() {
         addToCartButton.waitUntilClickable().click();
-        warrantyPopUpNoThankYouButton.waitUntilVisible();
+
+        fluentWaitForElementToBeVisible(By.id(warrantyPopUp), 3);
         return this;
     }
 
